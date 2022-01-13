@@ -11,4 +11,14 @@
 
 interface Station {
     
+    void turnOn();
+
+    void turnOff();
+
+    void nextStation(); //0.2 FM y 10 AM
+
+    void prevStation();
+
+
+
 }
