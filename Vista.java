@@ -56,4 +56,22 @@ public class Vista {
         
         return entero;
     }
+
+    public int MenuPrincipal(){
+        int desicion = 0;
+        System.out.println("--------------------------------------------------------");
+        System.out.println("-------------------- Acciones del Radio ------------------");
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Que accion deseas realizar?");
+        System.out.println("1. Prender Radio");
+        System.out.println("2. Cambiar Frecuencia (AM/FM)");
+        System.out.println("3. Subir de emisora.");
+        System.out.println("4. Bajar de emisora.");
+        System.out.println("5. Guardar emisora.");
+        System.out.println("6. Obtener emisora guardada.");
+        System.out.println("7. Apagar Radio.");
+        String s = " Ingrese su desicion: ";
+        desicion = solicitar_int(s, 1, 4);
+        return desicion;
+}
 }
