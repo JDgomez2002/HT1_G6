@@ -9,6 +9,51 @@
 //Sección 41
 //Actividad: Hoja de Trabajo 1
 
+import java.util.*;
+
 public class Vista {
-    
+    Scanner scan = new Scanner(System.in);
+
+    public void bienvenida(){
+        System.out.println();
+        System.out.println();
+        System.out.println("------------ Bienvenido al radio UVG ------------");
+        System.out.println();
+        System.out.println("------------ BIENVENID@ ------------");
+        System.out.println("---------------------------------------------------------------------------------------------------------------------");
+        System.out.println("- Esto es un simulador de radios para vehiculos!");
+        System.out.println("- Podra probar el radio e intercambiarlo con diferentes autos...");
+        System.out.println("- Estamos basados en la definición de Abstract Data Types!!!");
+        System.out.println("---------------------------------------------------------------------------------------------------------------------");
+        System.out.println();
+    }
+
+    public int solicitar_int(String s, int inferior, int superior){
+        inferior -= 1;
+        superior += 1;
+        int entero = 0;
+        boolean continuar = true;
+            while(continuar){
+                try{
+                System.out.print(s);
+                this.scan = new Scanner(System.in);
+                int numero = scan.nextInt();
+                if((numero>inferior)&&(numero<superior)){
+                    entero = numero;
+                    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+                    continuar = false; 
+                }
+                else{
+                    System.out.println("\t Error: debe de ingresar un entero valido.");   
+                    System.out.println();              
+                }
+                }
+                catch(Exception e){
+                    System.out.println("\t Error: debe de ingresar un entero valido.");
+                    System.out.println();
+                }
+            }
+        
+        return entero;
+    }
 }
