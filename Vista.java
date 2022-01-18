@@ -126,7 +126,7 @@ public int RecibirPosicion(){
     System.out.println();
     String s= "Ingrese el número en el que desea guardar la emisora: ";
     int n=0;
-    n= solicitar_double(s, 1, 12);
+    n= solicitar_int(s, 1, 12);
     return n;
 }
 }
