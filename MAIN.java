@@ -17,14 +17,28 @@ public class MAIN {
         Vista v = new Vista();
         v.bienvenida();
         while(!terminar){
+            opcion=v.MenuPrincipal();
             switch(opcion){
                 case 1:
+                //prender radio
                 break;
                 case 2:
+                //cambiar frecuencia (AM o FM)
                 break;
                 case 3:
+                // Subir emisora
+                break;
+                case 4:
+                // bajar emisora 
+                break;
+                case 5:
+                //guardar emisora
+                break;
+                case 6:
+                // obtener emisora
                 break;
                 default:
+                // apagar
                 break;
             }
 

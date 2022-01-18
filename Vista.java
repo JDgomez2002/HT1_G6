@@ -71,7 +71,7 @@ public class Vista {
         System.out.println("6. Obtener emisora guardada.");
         System.out.println("7. Apagar Radio.");
         String s = " Ingrese su desicion: ";
-        desicion = solicitar_int(s, 1, 4);
+        desicion = solicitar_int(s, 1, 7);
         return desicion;
 }
 }
