@@ -10,7 +10,24 @@
 //Actividad: Hoja de Trabajo 1
 
 public class MAIN {
+    
     public static void main(String[] args) {
-        
+        boolean terminar= false;
+        int opcion=0;
+        Vista v = new Vista();
+        v.bienvenida();
+        while(!terminar){
+            switch(opcion){
+                case 1:
+                break;
+                case 2:
+                break;
+                case 3:
+                break;
+                default:
+                break;
+            }
+
+        }
     }
 }
