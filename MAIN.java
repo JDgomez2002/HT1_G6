@@ -15,31 +15,46 @@ public class MAIN {
         boolean terminar= false;
         int opcion=0;
         Vista v = new Vista();
+        RadioGrupo6 r= new RadioGrupo6();
+        boolean encendido= false;
         v.bienvenida();
         while(!terminar){
-            opcion=v.MenuPrincipal();
-            switch(opcion){
-                case 1:
-                //prender radio
-                break;
-                case 2:
-                //cambiar frecuencia (AM o FM)
-                break;
-                case 3:
-                // Subir emisora
-                break;
-                case 4:
-                // bajar emisora 
-                break;
-                case 5:
-                //guardar emisora
-                break;
-                case 6:
-                // obtener emisora
-                break;
-                default:
-                // apagar
-                break;
+            if (encendido){
+                opcion=v.MenuPrincipalOn();
+                switch(opcion){
+                    case 1:
+                    //cambiar frecuencia (AM o FM)
+                    r.switchAMFM();
+                    break;
+                    case 2:
+                    // Subir emisora
+                    r.nextStation(true);
+                    break;
+                    case 3:
+                    // bajar emisora 
+                    r.prevStation(true);
+                    break;
+                    case 4:
+                    //guardar emisora
+                    double m=0;
+                
+                    break;
+                    case 5:
+                    // obtener emisora
+                    break;
+                    default:
+                    // apagar
+                    encendido=false;
+                    break;
+                }
+            }
+            else{
+                int decision=0;
+                decision= v.MenuPrincipalOff();
+                if(decision==1){
+                    encendido=true;
+                    v.RadioEncendido();
+                }
             }
 
         }
