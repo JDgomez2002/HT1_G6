@@ -45,11 +45,27 @@ public class MAIN {
                     break;
                     case 4:
                     //guardar emisora
-                    double m=0;
+                    double m = 0; //emisora
+                    int i = 0;//posicion
+
+                    m = v.obtener_emisora();
+                    i = v.obtener_posicion_emisora();
+
+                    r.saveStation(i, m);
+
+                    v.estacion_guardada();
                 
                     break;
                     case 5:
                     // obtener emisora
+
+                    int l = 0;
+                    l = v.obtener_posicion_emisora_guardada();
+
+                    double emisora_guardada = r.getSavedStation(l);
+
+                    v.emisora_guardada(emisora_guardada);
+
                     break;
                     default:
                     // apagar
@@ -213,6 +229,57 @@ public int RecibirPosicion(){
     return n;
 }
 
+public double obtener_emisora(){
+    System.out.println();
+    System.out.println();
+    System.out.println("- Ingrese la emisora que desea guardar.");
+    System.out.println("NOTA: La emisora debe de ser con coma. (Ej: 84,64)");
+    String s = "Ingrese su emisora con coma: ";
+    double emisora = solicitar_double(s, 0, 1000);
+    System.out.println();
+    return emisora;
+}
+
+public int obtener_posicion_emisora(){
+    System.out.println();
+    System.out.println();
+    String s = "Ingrese la posicion en la que desea guardar la emisora: ";
+    int posicion = solicitar_int(s, 1, 12);
+    System.out.println();
+    return posicion;
+}
+
+public void estacion_guardada(){
+    System.out.println();
+    System.out.println("\nSu estacion ha sido guardad exitosamente...");
+    System.out.println();
+    System.out.println("\nRecuerde no perder la posicion en la que guardo su emisora.");
+    System.out.println();
+}
+
+public int obtener_posicion_emisora_guardada(){
+    System.out.println();
+    System.out.println();
+    String s = "Ingrese la posicion en la que guardo su genial emisora: ";
+    int posicion = solicitar_int(s, 1, 12);
+    System.out.println();
+    return posicion;
+}
+
+public void emisora_guardada(double e){
+    if(!(e==0)){
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println();
+        System.out.println("\nSu emisora guardada es la "+df.format(e));
+        System.out.println();
+    }
+    else{
+        System.out.println();
+        System.out.println("\nLo sentimos, No hay una emisora guardada en esa posicion...");
+        System.out.println();
+    }
+    
+}
 
 
 }
