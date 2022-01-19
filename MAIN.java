@@ -9,6 +9,7 @@
 //Sección 41
 //Actividad: Hoja de Trabajo 1
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class MAIN {
@@ -22,11 +23,17 @@ public class MAIN {
         v.bienvenida();
         while(!terminar){
             if (encendido){
+
+                double actual_station = r.getStation();
+                boolean actual_frequency = r.getFrequency();
+
+                v.mostrar_radio(actual_station, actual_frequency);
                 opcion=v.MenuPrincipalOn();
                 switch(opcion){
                     case 1:
                     //cambiar frecuencia (AM o FM)
                     r.switchAMFM();
+
                     break;
                     case 2:
                     // Subir emisora
@@ -145,7 +152,7 @@ class Vista {
     public int MenuPrincipalOn(){
         int desicion = 0;
         System.out.println("--------------------------------------------------------");
-        System.out.println("-------------------- Acciones del Radio ------------------");
+        System.out.println("-------------------- Acciones del Radio ----------------");
         System.out.println("--------------------------------------------------------");
         System.out.println("Que accion deseas realizar?");
         System.out.println("1. Cambiar Frecuencia (AM/FM)");
@@ -161,7 +168,7 @@ class Vista {
 public int MenuPrincipalOff(){
     int desicion = 0;
     System.out.println("--------------------------------------------------------");
-    System.out.println("-------------------- ¿Desea encender el radio?------------------");
+    System.out.println("-------------- ¿Desea encender el radio? ---------------");
     System.out.println("--------------------------------------------------------");
     System.out.println("1. Si");
     System.out.println("2. No");
@@ -169,6 +176,25 @@ public int MenuPrincipalOff(){
     desicion = solicitar_int(s, 1, 2);
     return desicion;
 }
+
+public void mostrar_radio(double station, boolean frequency){
+    System.out.println();
+    System.out.println("---------------------------------------------------");
+    System.out.println("-------------- Información de radio ---------------");
+    System.out.println("---------------------------------------------------");
+    if(frequency){
+        System.out.println("Frecuencia: AM");
+    }
+    else{
+        System.out.println("Frecuencia: FM");
+    }
+    DecimalFormat df = new DecimalFormat("#.00");
+
+    System.out.println("- Estacion: "+df.format(station));
+    System.out.println();
+}
+
+
 public void RadioEncendido(){
     System.out.println("El radio está encendido");
 }

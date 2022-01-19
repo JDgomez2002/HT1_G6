@@ -51,11 +51,11 @@ public class RadioGrupo6 implements Radio{
             }
         }
         else{ //FM
-            if(this.emisora_am>=107.9){
-                this.emisora_am = 87.9;
+            if(this.emisora_fm>=107.9){
+                this.emisora_fm = 87.9;
             }
             else{
-                this.emisora_am += 0.2;
+                this.emisora_fm += 0.2;
             }
         }
     }
@@ -70,11 +70,11 @@ public class RadioGrupo6 implements Radio{
             }
         }
         else{ //FM
-            if(this.emisora_am<=87.9){
-                this.emisora_am = 107.9;
+            if(this.emisora_fm<=87.9){
+                this.emisora_fm = 107.9;
             }
             else{
-                this.emisora_am -= 0.2;
+                this.emisora_fm -= 0.2;
             }
         }
     }  
