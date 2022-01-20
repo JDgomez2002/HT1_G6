@@ -19,16 +19,16 @@ public class MAIN {
         int opcion=0;
         Vista v = new Vista();
 
-        RadioGrupo6 r = new RadioGrupo6();
+        Radio r = new RadioGrupo6();
         
         //GRUPO 1
-        //RadioGrupo1 r = new RadioGrupo1();
+        //Radio r = new RadioGrupo1();
 
         //GRUPO 3
-        // RadioController r = new RadioController();
+        // Radio r = new RadioController();
 
         //GRUPO 8
-        // RadioG8 r = new RadioG8();
+        // Radio r = new RadioG8();
 
         boolean encendido= false;
         v.bienvenida();
