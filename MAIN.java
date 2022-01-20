@@ -27,6 +27,9 @@ public class MAIN {
         //GRUPO 3
         // RadioController r = new RadioController();
 
+        //GRUPO 8
+        // RadioG8 r = new RadioG8();
+
         boolean encendido= false;
         v.bienvenida();
         while(!terminar){
