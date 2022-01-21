@@ -9,6 +9,10 @@
 //Sección 41
 //Actividad: Hoja de Trabajo 1
 
+/*
+NOTA IMPORTANTE: PARA FACILITAR EL INTERCAMBIO DE MAINS, COLOCAMOS LA VISTA TAMBIEN EN EL ARCHIVO MAIN.
+*/
+
 // import java.util.*;
 // import java.text.DecimalFormat;
 
@@ -101,106 +105,105 @@
 //         String s = " Ingrese su desicion: ";
 //         desicion = solicitar_int(s, 1, 6);
 //         return desicion;
-// }
-// public int MenuPrincipalOff(){
-//     int desicion = 0;
-//     System.out.println("--------------------------------------------------------");
-//     System.out.println("-------------- ¿Desea encender el radio? ---------------");
-//     System.out.println("--------------------------------------------------------");
-//     System.out.println("1. Si");
-//     System.out.println("2. No");
-//     String s = " Ingrese su desicion: ";
-//     desicion = solicitar_int(s, 1, 2);
-//     return desicion;
-// }
-
-// public void mostrar_radio(double station, boolean frequency){
-//     System.out.println();
-//     System.out.println("---------------------------------------------------");
-//     System.out.println("-------------- Información de radio ---------------");
-//     System.out.println("---------------------------------------------------");
-//     if(frequency){
-//         System.out.println("Frecuencia: AM");
 //     }
-//     else{
-//         System.out.println("Frecuencia: FM");
+//     public int MenuPrincipalOff(){
+//         int desicion = 0;
+//         System.out.println("--------------------------------------------------------");
+//         System.out.println("-------------- ¿Desea encender el radio? ---------------");
+//         System.out.println("--------------------------------------------------------");
+//         System.out.println("1. Si");
+//         System.out.println("2. No");
+//         String s = " Ingrese su desicion: ";
+//         desicion = solicitar_int(s, 1, 2);
+//         return desicion;
 //     }
-//     DecimalFormat df = new DecimalFormat("#.00");
 
-//     System.out.println("- Estacion: "+df.format(station));
-//     System.out.println();
-// }
-
-
-// public void RadioEncendido(){
-//     System.out.println("El radio está encendido");
-// }
-// public double RecibirEmisora(){
-//     System.out.println();
-//     String s= "Ingrese el número de emisora: ";
-//     double n=0;
-//     n= solicitar_double(s, 0, 1000);
-//     return n;
-// }
-// public int RecibirPosicion(){
-//     System.out.println();
-//     String s= "Ingrese el número en el que desea guardar la emisora: ";
-//     int n=0;
-//     n= solicitar_int(s, 1, 12);
-//     return n;
-// }
-
-// public double obtener_emisora(){
-//     System.out.println();
-//     System.out.println();
-//     System.out.println("- Ingrese la emisora que desea guardar.");
-//     System.out.println("NOTA: La emisora debe de ser con coma. (Ej: 84,64)");
-//     String s = "Ingrese su emisora con coma: ";
-//     double emisora = solicitar_double(s, 0, 1000);
-//     System.out.println();
-//     return emisora;
-// }
-
-// public int obtener_posicion_emisora(){
-//     System.out.println();
-//     System.out.println();
-//     String s = "Ingrese la posicion en la que desea guardar la emisora: ";
-//     int posicion = solicitar_int(s, 1, 12);
-//     System.out.println();
-//     return posicion;
-// }
-
-// public void estacion_guardada(){
-//     System.out.println();
-//     System.out.println("\nSu estacion ha sido guardad exitosamente...");
-//     System.out.println();
-//     System.out.println("\nRecuerde no perder la posicion en la que guardo su emisora.");
-//     System.out.println();
-// }
-
-// public int obtener_posicion_emisora_guardada(){
-//     System.out.println();
-//     System.out.println();
-//     String s = "Ingrese la posicion en la que guardo su genial emisora: ";
-//     int posicion = solicitar_int(s, 1, 12);
-//     System.out.println();
-//     return posicion;
-// }
-
-// public void emisora_guardada(double e){
-//     if(!(e==0)){
+//     public void mostrar_radio(double station, boolean frequency){
+//         System.out.println();
+//         System.out.println("---------------------------------------------------");
+//         System.out.println("-------------- Información de radio ---------------");
+//         System.out.println("---------------------------------------------------");
+//         if(frequency){
+//             System.out.println("Frecuencia: AM");
+//         }
+//         else{
+//             System.out.println("Frecuencia: FM");
+//         }
 //         DecimalFormat df = new DecimalFormat("#.00");
-//         System.out.println();
-//         System.out.println("\nSu emisora guardada es la "+df.format(e));
+
+//         System.out.println("- Estacion: "+df.format(station));
 //         System.out.println();
 //     }
-//     else{
+
+
+//     public void RadioEncendido(){
+//         System.out.println("El radio está encendido");
+//     }
+
+//     public double RecibirEmisora(){
 //         System.out.println();
-//         System.out.println("\nLo sentimos, No hay una emisora guardada en esa posicion...");
+//         String s= "Ingrese el número de emisora: ";
+//         double n=0;
+//         n= solicitar_double(s, 0, 1000);
+//         return n;
+//     }
+
+//     public int RecibirPosicion(){
+//         System.out.println();
+//         String s= "Ingrese el número en el que desea guardar la emisora: ";
+//         int n=0;
+//         n= solicitar_int(s, 1, 12);
+//         return n;
+//     }
+
+//     public double obtener_emisora(){
+//         System.out.println();
+//         System.out.println();
+//         System.out.println("- Ingrese la emisora que desea guardar.");
+//         System.out.println("NOTA: La emisora debe de ser con coma. (Ej: 84,64)");
+//         String s = "Ingrese su emisora con coma: ";
+//         double emisora = solicitar_double(s, 0, 1000);
+//         System.out.println();
+//         return emisora;
+//     }
+
+//     public int obtener_posicion_emisora(){
+//         System.out.println();
+//         System.out.println();
+//         String s = "Ingrese la posicion en la que desea guardar la emisora: ";
+//         int posicion = solicitar_int(s, 1, 12);
+//         System.out.println();
+//         return posicion;
+//     }
+
+//     public void estacion_guardada(){
+//         System.out.println();
+//         System.out.println("\nSu estacion ha sido guardad exitosamente...");
+//         System.out.println();
+//         System.out.println("\nRecuerde no perder la posicion en la que guardo su emisora.");
 //         System.out.println();
 //     }
-    
-// }
 
+//     public int obtener_posicion_emisora_guardada(){
+//         System.out.println();
+//         System.out.println();
+//         String s = "Ingrese la posicion en la que guardo su genial emisora: ";
+//         int posicion = solicitar_int(s, 1, 12);
+//         System.out.println();
+//         return posicion;
+//     }
 
+//     public void emisora_guardada(double e){
+//         if(!(e==0)){
+//             DecimalFormat df = new DecimalFormat("#.00");
+//             System.out.println();
+//             System.out.println("\nSu emisora guardada es la "+df.format(e));
+//             System.out.println();
+//         }
+//         else{
+//             System.out.println();
+//             System.out.println("\nLo sentimos, No hay una emisora guardada en esa posicion...");
+//             System.out.println();
+//         }
+//     }
 // }
