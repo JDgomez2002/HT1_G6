@@ -54,7 +54,7 @@ class RadioGrupo6Test {
 				resultado = rad.getStation(); // valor resultante
 			}
 		}
-		assertEquals(esperado, resultado);// comprobación de las pruebas, fallos
+		assertEquals(esperado, resultado);// comprobaciï¿½n de las pruebas, fallos
 		
 	}
 	
@@ -100,7 +100,7 @@ class RadioGrupo6Test {
 				resultado = rad.getStation(); // valor resultante
 			}
 		}
-		assertEquals(esperado, resultado);// comprobación de las pruebas, fallos
+		assertEquals(esperado, resultado);// comprobaciï¿½n de las pruebas, fallos
 	}
 /*
 	@Test

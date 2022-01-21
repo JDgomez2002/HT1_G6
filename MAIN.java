@@ -49,12 +49,12 @@ public class MAIN {
 
                     case 2:
                         // Subir emisora
-                        r.nextStation(true);
+                        r.nextStation(r.getFrequency());
                         break;
 
                     case 3:
                         // bajar emisora 
-                        r.prevStation(true);
+                        r.prevStation(r.getFrequency());
                         break;
 
                     case 4:
