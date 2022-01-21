@@ -12,6 +12,10 @@
 import java.text.DecimalFormat;
 import java.util.*;
 
+/**
+ * Controller of the program.
+ */
+
 public class MAIN {
     
     public static void main(String[] args) {
@@ -110,6 +114,9 @@ public class MAIN {
 class Vista {
     Scanner scan = new Scanner(System.in);
 
+    /**
+     * Metodo para darle una bienvenida al usuario.
+     */
     public void bienvenida(){
         System.out.println();
         System.out.println();
@@ -124,6 +131,11 @@ class Vista {
         System.out.println();
     }
 
+    /**
+     * Metodo privado para solicitar un entero al usuario.
+     * @return int
+     * @param String,int,int
+     */
     private int solicitar_int(String s, int inferior, int superior){
         inferior -= 1;
         superior += 1;
@@ -152,6 +164,12 @@ class Vista {
         
         return entero;
     }
+
+    /**
+     * Metodo privado para solicitar un double al usuario.
+     * @return double
+     * @param String,double,double
+     */
     private double solicitar_double(String s, double inferior, double superior){
         inferior -= 1;
         superior += 1;
@@ -181,6 +199,11 @@ class Vista {
         return entero;
     }
 
+    /**
+     * Metodo de menu principal cuando el radio este encendido.
+     * retorna un entero para poder utilizarlo en el switch del controlador.
+     * @return int
+     */
     public int MenuPrincipalOn(){
         int desicion = 0;
         System.out.println("--------------------------------------------------------");
@@ -197,6 +220,12 @@ class Vista {
         desicion = solicitar_int(s, 1, 6);
         return desicion;
     }
+
+    /**
+     * Metodo de menu principal cuando el radio este apagado.
+     * Retorna un int para saber cuando el usuario desee encender la radio.
+     * @return int
+     */
     public int MenuPrincipalOff(){
         int desicion = 0;
         System.out.println("--------------------------------------------------------");
@@ -209,6 +238,10 @@ class Vista {
         return desicion;
     }
 
+    /**
+     * Metodo para mostrar informacion de la radio cuando este encendida.
+     * @param double,boolean
+     */
     public void mostrar_radio(double station, boolean frequency){
         System.out.println();
         System.out.println("---------------------------------------------------");
@@ -226,11 +259,18 @@ class Vista {
         System.out.println();
     }
 
-
+    /**
+     * Metodo de vista para el usuario.
+     * Unicamente imprime un mensaje.
+     */
     public void RadioEncendido(){
         System.out.println("El radio está encendido");
     }
 
+    /**
+     * Metodo para recibir una emisora de parte del usuario.
+     * @return double
+     */
     public double RecibirEmisora(){
         System.out.println();
         String s= "Ingrese el número de emisora: ";
@@ -239,6 +279,10 @@ class Vista {
         return n;
     }
 
+    /**
+     * Metodo para recibir una posicion de emisora del usuario.
+     * @return int
+     */
     public int RecibirPosicion(){
         System.out.println();
         String s= "Ingrese el número en el que desea guardar la emisora: ";
@@ -247,6 +291,10 @@ class Vista {
         return n;
     }
 
+    /**
+     * Metodo para obtener una emisora en forma de double de parte del usuario.
+     * @return double
+     */
     public double obtener_emisora(){
         System.out.println();
         System.out.println();
@@ -258,6 +306,10 @@ class Vista {
         return emisora;
     }
 
+    /**
+     * Metodo para obtener del usuario la posicion de la emisora que desea obtener.
+     * @return int
+     */
     public int obtener_posicion_emisora(){
         System.out.println();
         System.out.println();
@@ -267,6 +319,10 @@ class Vista {
         return posicion;
     }
 
+    /**
+     * Metodo de vista para el usuario.
+     * Unicamente imprime un texto informativo.
+     */
     public void estacion_guardada(){
         System.out.println();
         System.out.println("\nSu estacion ha sido guardad exitosamente...");
@@ -275,6 +331,10 @@ class Vista {
         System.out.println();
     }
 
+    /**
+     * Metodo para obtener una posicion de emisora guardada por el usuario
+     * @return int
+     */
     public int obtener_posicion_emisora_guardada(){
         System.out.println();
         System.out.println();
@@ -284,6 +344,11 @@ class Vista {
         return posicion;
     }
 
+    /**
+     * Metodo de vista para el usuario.
+     * imprime informacion de la emisora guardada.
+     * @param double
+     */
     public void emisora_guardada(double e){
         if(!(e==0)){
             DecimalFormat df = new DecimalFormat("#.00");

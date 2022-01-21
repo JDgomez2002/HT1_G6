@@ -9,6 +9,10 @@
 //Sección 41
 //Actividad: Hoja de Trabajo 1
 
+/**
+ * Implements all the methods that the Radio should have.
+ */
+
 public class RadioGrupo6 implements Radio{
     private boolean on;
     private double emisora_am; //530 -> 1610
@@ -16,7 +20,9 @@ public class RadioGrupo6 implements Radio{
     private boolean frequency; //true = AM
     private double[] emisoras_guardadas = new double[12];
 
-
+    /**
+     * Constructor
+     */
     public RadioGrupo6(){
         this.on = false;
         this.emisora_am = 530;
@@ -28,10 +34,17 @@ public class RadioGrupo6 implements Radio{
 
     }
 
+    /**
+     * Get the current state of the radio.
+     * @return boolean indicating if the Radio is on.
+     */
     public boolean isOn(){
         return this.on;
     }
 
+    /**
+     * Switch the on state of the Radio.
+     */
     public void turnOnOff(){
         if(this.on){
             this.on = false;
@@ -41,6 +54,10 @@ public class RadioGrupo6 implements Radio{
         }
     }
 
+    /**
+     * Move forward into the station dial.
+     * @param frequency boolean indicating if the frequency is AM or FM. true = AM
+     */
     public void nextStation(boolean frequency){
         if(this.frequency){ //AM
             if(this.emisora_am>=1610){
@@ -60,6 +77,10 @@ public class RadioGrupo6 implements Radio{
         }
     }
 
+    /**
+     * Move backwards into the station dial.
+     * @param frequency boolean indicating if the frequency is AM or FM. true = AM.
+     */
     public void prevStation(boolean frequency){
         if(this.frequency){ //AM
             if(this.emisora_am<=530){
@@ -79,6 +100,10 @@ public class RadioGrupo6 implements Radio{
         }
     }  
 
+    /**
+     * Get the current station selected.
+     * @return double indicating the current station selected.
+     */
     public double getStation(){
         double actual_frequency = 0;
         if(this.frequency){ //AM
@@ -90,20 +115,36 @@ public class RadioGrupo6 implements Radio{
         return actual_frequency;
     }
 
+    /**
+     * Save a station on the favorites array.
+     * @param position index indicating where to store the station.
+     * @param station double indicating the station.
+     */
     public void saveStation(int position, double station){
         if((position>=0)&&(position<12)){
             this.emisoras_guardadas[position] = station;
         }
     }
 
+    /**
+     * Get a saved station on the favorites array
+     * @param position index indicating which station to pick.
+     */
     public double getSavedStation(int position){
         return this.emisoras_guardadas[position];
     }
 
+    /**
+     * Get the current frequency. And also save it as the current station.
+     * @return boolean indicating if it is AM or FM. true = AM.
+     */
     public boolean getFrequency(){
         return this.frequency;
     }
 
+    /**
+     * Switch the frequency selected.
+     */
     public void switchAMFM(){
         if(this.frequency){
             this.frequency = false;
