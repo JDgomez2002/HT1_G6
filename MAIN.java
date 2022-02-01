@@ -43,7 +43,7 @@ public class MAIN {
                 boolean actual_frequency = r.getFrequency();
 
                 v.mostrar_radio(actual_station, actual_frequency);
-                opcion=v.MenuPrincipalOn();
+                opcion = v.MenuPrincipalOn();
                 switch(opcion){
                     case 1:
                         //cambiar frecuencia (AM o FM)
